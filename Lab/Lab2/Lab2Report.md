@@ -16,14 +16,11 @@ Lab SA:
 
 - **Source Code**
 ```python
-import gc
-
 def narcissistic(value: int) -> bool:
     length = len(str(value))
     subs = [int(single) ** length for single in str(value)]
     sum3 = sum(subs)
     del subs
-    gc.collect()
     return sum3 == value
 
 
@@ -36,7 +33,6 @@ def find_narcissistic_number(start: int, end: int) -> list:
 
 
 print(' '.join([str(i) for i in find_narcissistic_number(1, 1000000)]))
-
 ```
 This program can display all the narcissistic numbers from 1 to 1,000,000(including).
 
