@@ -11,8 +11,7 @@ Lab SA:
 - Siyu LIU 11912935@mail.sustech.edu.cn
 - Xingying ZHENG 11912039@mail.sustech.edu.cn
 
-## Practice 1
-- **Problem: Find Narcissistic Numbers**
+## Practice 1: Find Narcissistic Numbers
 
 - **Source Code**
 ```python
@@ -45,8 +44,7 @@ python3 narcissistic_number.py
 And this is the screenshot of the python source code.
 ![image](https://user-images.githubusercontent.com/64548919/155740310-37b2a345-b4dd-4a2b-a369-7228fb7897e3.png)
 
-## Practice 2
-- **Problem: Wireshark**
+## Practice 2: Wireshark & curl
 
 ### Problem 2-1
 #### Q1
@@ -154,3 +152,59 @@ Comparing the result in Q2 of Problem 2-1 and Q2 of Problem 2-2:
 | Destination Port    | 10439           | 10071          |
 
 And we can find that the source port and destination address are identical in the two cases.
+
+## Practice 3: Wireshark & tracert
+### Q1
+
+#### Q1-1
+- Step 1: Add capture filter to select those packets whose destination address is www.163.com.
+
+```
+ip host www.163.com
+```
+![image](https://user-images.githubusercontent.com/64548919/155871997-2d569638-0c3e-481b-958d-80e370fc20f1.png)
+
+
+
+- Step 2: Type the following commands to trace the route:
+
+```
+tracert -4 www.163.com
+```
+
+![image](https://user-images.githubusercontent.com/64548919/155871695-c2739d23-452b-4189-b208-463822dfa7a7.png)
+
+And we can find those packets with display filter ```icmp```
+
+![image](https://user-images.githubusercontent.com/64548919/155871720-8dd27966-a28b-485c-97d6-504eaab5149d.png)
+
+Reorganize the packet information, group by Info.
+
+  - 8 echo reply messages
+
+![image](https://user-images.githubusercontent.com/64548919/155871913-01c79a5e-3afb-4a96-b419-5cd8a739a2fe.png)
+
+  - 27 time-to-live exceed messages
+
+![image](https://user-images.githubusercontent.com/64548919/155871934-49434cc2-f1bb-4598-811f-31a7bd270f1f.png)
+
+- Step 3: Reorganize the packet information, order by No.
+
+![image](https://user-images.githubusercontent.com/64548919/155872108-99483cf2-1446-435a-8287-fceadc29905f.png)
+
+We can find the first received 'time-to-live exceed' message number is 60, and the first received 'echo reply' message number is 1090.
+
+![image](https://user-images.githubusercontent.com/64548919/155872384-62bc76e4-034d-4c76-807a-b26b1418ed3e.png)
+
+![image](https://user-images.githubusercontent.com/64548919/155872405-bb8fe71f-aa12-47c0-b4d2-81f517cf6260.png)
+
+- Step 4: Click and see the details.
+
+  - First TTL Exceed Source IP Address: 10.10.10.11
+
+![image](https://user-images.githubusercontent.com/64548919/155872513-a4888b9e-cee2-49b6-99d3-e1bb3e0657d1.png)
+  
+  - First Echo Reply Source IP Address: 10.27.255.254
+
+![image](https://user-images.githubusercontent.com/64548919/155872581-4191f7f5-6d65-46b8-9027-ca78034eaf0c.png)
+
