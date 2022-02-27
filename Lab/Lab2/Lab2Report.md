@@ -155,8 +155,6 @@ And we can find that the source port and destination address are identical in th
 
 ## Practice 3: Wireshark & tracert
 ### Q1
-
-#### Q1-1
 - Step 1: Add capture filter to select those packets whose destination address is www.163.com.
 
 ```
@@ -208,3 +206,23 @@ We can find the first received 'time-to-live exceed' message number is 60, and t
 
 ![image](https://user-images.githubusercontent.com/64548919/155872581-4191f7f5-6d65-46b8-9027-ca78034eaf0c.png)
 
+### Q2
+- Step 1: Use the command to calculate RTT.
+
+```
+ping -4 www.164.com
+```
+
+![image](https://user-images.githubusercontent.com/64548919/155875655-3771113a-9819-49c1-9044-04c770a7f680.png)
+
+We can see the RTT value is 13ms.
+
+- Step 2: Use wireshark to find RTT of all selected packets.
+
+![image](https://user-images.githubusercontent.com/64548919/155876012-43476e81-b50d-482f-8381-ec0eb5f38bb9.png)
+
+The average value is 0.027430 ms.
+
+We find that this result is not as same as command line result.
+
+### Q3
