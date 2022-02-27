@@ -180,11 +180,11 @@ And we can find those packets with display filter ```icmp```
 
 Reorganize the packet information, group by Info.
 
-  - 8 echo reply messages
+**8 echo reply messages**
 
 ![image](https://user-images.githubusercontent.com/64548919/155871913-01c79a5e-3afb-4a96-b419-5cd8a739a2fe.png)
 
-  - 27 time-to-live exceed messages
+**27 time-to-live exceed messages**
 
 ![image](https://user-images.githubusercontent.com/64548919/155871934-49434cc2-f1bb-4598-811f-31a7bd270f1f.png)
 
@@ -200,11 +200,11 @@ We can find the first received 'time-to-live exceed' message number is 60, and t
 
 - Step 4: Click and see the details.
 
-  - First TTL Exceed Source IP Address: 10.10.10.11
+**First TTL Exceed Source IP Address: 10.10.10.11**
 
 ![image](https://user-images.githubusercontent.com/64548919/155872513-a4888b9e-cee2-49b6-99d3-e1bb3e0657d1.png)
   
-  - First Echo Reply Source IP Address: 10.27.255.254
+**First Echo Reply Source IP Address: 10.27.255.254**
 
 ![image](https://user-images.githubusercontent.com/64548919/155872581-4191f7f5-6d65-46b8-9027-ca78034eaf0c.png)
 
