@@ -221,7 +221,7 @@ We can see the RTT value is 13ms.
 
 ![image](https://user-images.githubusercontent.com/64548919/155876012-43476e81-b50d-482f-8381-ec0eb5f38bb9.png)
 
-The average value is 0.027430 ms.
+The average value is 0.027430 s = 27.430ms.
 
 We find that this result is not as same as command line result.
 
