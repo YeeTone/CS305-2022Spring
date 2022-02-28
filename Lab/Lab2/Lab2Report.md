@@ -226,3 +226,33 @@ The average value is 0.027430 s = 27.430ms.
 We find that this result is not as same as command line result.
 
 ### Q3
+
+- Step 1: Type the following command in the command line.
+
+```
+tracert -4 www.163.com
+```
+
+Then we can find the route of accessing www.163.com.
+![image](https://user-images.githubusercontent.com/64548919/155979879-0af26de0-bd45-4524-babf-1b379791550e.png)
+
+- Step 2: Use Wireshark to find the corresponding packet. (We take the second line with ip address 10.23.255.83 as the example)
+
+Use the following display filter:
+
+```
+icmp && ip.addr == 10.23.255.83
+```
+
+![image](https://user-images.githubusercontent.com/64548919/155980361-0992d79b-1c5f-4222-a269-efb3f127f909.png)
+
+- Step 3: See the packet TTL information.
+
+![image](https://user-images.githubusercontent.com/64548919/155980428-d99fa887-6469-4164-b2f4-7e48bf44532c.png)
+
+We can see the TTL + hop = 254 + 2 = 256, is the constant.
+
+#### Proof
+This sum value is constant, because when the ip hops from one address to another, the TTL value will decrease 1 and hop will increase 1.
+If the TTL is 0 after decreasing, then the packet will be processed, or loss.
+Therefore, the sum will be an constant value.
