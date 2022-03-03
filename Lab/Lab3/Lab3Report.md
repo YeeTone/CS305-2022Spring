@@ -91,3 +91,24 @@ Also type the commands in **Q1**, and we can get the server port numbers from th
 80
 443
 ```
+
+## Practice 3: Enable Telnet
+- Step 1: Open the Windows 10 Setting and go to ```应用```.
+
+![image](https://user-images.githubusercontent.com/64548919/156605377-7b5babae-af8b-4b67-93c0-217f594e5f89.png)
+
+- Step 2: Drag into the bottom and click ```程序和功能```.
+
+![image](https://user-images.githubusercontent.com/64548919/156606237-cc6171dd-c964-49c1-8842-75b006cdf343.png)
+
+- Step 3: Click ```启动或关闭Windows功能```
+
+![image](https://user-images.githubusercontent.com/64548919/156606460-f1089993-1101-4699-84fb-fdfc10b23528.png)
+
+- Step 4: Select ```Telnet客户端```
+
+![image](https://user-images.githubusercontent.com/64548919/156606819-cd9822bc-2cdf-46ac-823a-b8b2b925c1a8.png)
+
+- Step 5: Open a command line and type ```telnet```.
+
+![image](https://user-images.githubusercontent.com/64548919/156607390-851e4d12-5414-4d95-a762-4fc3b32b5e98.png)
