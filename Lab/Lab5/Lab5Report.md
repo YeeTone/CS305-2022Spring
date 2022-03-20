@@ -12,7 +12,7 @@ Lab SA:
 - Xingying ZHENG 11912039@mail.sustech.edu.cn
 
 ## Practice5-1: Query using ```dig```
-**Step 1: Type the following in the command line:**
+### Step 1: Type the following in the command line:
 
 ```
 dig www.sina.com.cn +trace
@@ -22,7 +22,7 @@ This is the screenshot of the output in the command line:
 
 ![image](https://user-images.githubusercontent.com/64548919/159166750-34755f96-4ccd-47b5-ad8f-06819128253d.png)
 
-**Step 2: Packet Analysis**
+### Step 2: Packet Analysis
 
 - `RD` and `RA` field in the query:
 
@@ -76,6 +76,34 @@ And the value of `AA` is 1:
 We can see the source ip address is not identical as previous, so they are different servers.
 
 This can bring benefits for providing diverted ip address accessing.
+
+## Practice5-2: EDNS Query
+### Step 1: Send Query
+Type the following in the command line:
+
+```
+dig www.bilibili.com +edns
+```
+
+Here are the running result in the command line:
+
+![image](https://user-images.githubusercontent.com/64548919/159170459-4abd9af8-3ec9-4226-bb4c-d1f24b438dc8.png)
+
+### Step 2：Analyze the Packets
+
+- Destination IP Address and Port
+
+![image](https://user-images.githubusercontent.com/64548919/159170515-1f3f0eb7-792c-48d5-a699-e02ecb0f5194.png)
+
+Destination IP Address is `172.18.1.92` and Port is `53`.
+
+- Name, Type and Class
+
+![image](https://user-images.githubusercontent.com/64548919/159170571-e0922a6b-1771-4a45-884a-392c427c2113.png)
+
+Name is `www.bilibili.com`, Type is `A (Host Address)` and Class is `IN (0x0001)`.
+
+
 
 
 
