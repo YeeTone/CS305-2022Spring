@@ -69,11 +69,13 @@ And the value of `AA` is 1:
 
 ![image](https://user-images.githubusercontent.com/64548919/159169051-c3d74096-9234-474e-a761-8bbef45bb159.png)
 
-- Try again for the same Query
+- Try again for the Same Query
 
 ![image](https://user-images.githubusercontent.com/64548919/159169107-db9e28a0-c65f-4a64-994e-6f2500854c6e.png)
 
-We can see the source ip address is not identical as previous, so they are not the same server.
+We can see the source ip address is not identical as previous, so they are different servers.
+
+This can bring benefits for providing diverted ip address accessing.
 
 
 
