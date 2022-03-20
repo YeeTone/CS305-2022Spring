@@ -91,6 +91,7 @@ Here are the running result in the command line:
 
 ### Step 2：Analyze the Packets
 
+#### Query Message
 - Destination IP Address and Port
 
 ![image](https://user-images.githubusercontent.com/64548919/159170515-1f3f0eb7-792c-48d5-a699-e02ecb0f5194.png)
@@ -103,8 +104,31 @@ Destination IP Address is `172.18.1.92` and Port is `53`.
 
 Name is `www.bilibili.com`, Type is `A (Host Address)` and Class is `IN (0x0001)`.
 
+- Opcode
 
+![image](https://user-images.githubusercontent.com/64548919/159170634-c76b130b-6295-4d3d-9ce8-630d1820f3e2.png)
 
+The opcode is `0000`, indicating it is a standard query.
+
+- Additional RRs
+
+![image](https://user-images.githubusercontent.com/64548919/159170686-a0b8ee48-20d2-45ce-bd8a-7e8cf1d41528.png)
+
+There is no additional RRs.
+
+#### Response Message
+
+- Answers and TTLs
+
+There are multiple answers, and their TTLs are shown in the following screenshots.
+
+![image](https://user-images.githubusercontent.com/64548919/159170788-44495f1a-cb3a-4d95-9f53-9af8754ce443.png)
+
+- Authority RRs
+
+![image](https://user-images.githubusercontent.com/64548919/159170898-6af31f92-a572-4c25-abfd-8d33a80bee84.png)
+
+There are 2 authority RRs. Their type is `NS (authoritative Name Server) (2)`.
 
 
 
