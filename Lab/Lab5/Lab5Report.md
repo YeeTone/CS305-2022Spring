@@ -130,6 +130,53 @@ There are multiple answers, and their TTLs are shown in the following screenshot
 
 There are 2 authority RRs. Their type is `NS (authoritative Name Server) (2)`.
 
+## Practice5-3: DNS Client Implementation
+Source code:
+```python
+import dns.resolver
+import sys
+
+domain = sys.argv[1]
+queryType = sys.argv[2]
+
+try:
+    q = dns.resolver.resolve(qname=domain, rdtype=queryType, raise_on_no_answer=False)
+    # print(q.rrset)
+    # print(q.qname)
+    # print(q.rdtype)
+    # print(q.rdclass)
+    print('Answer:',q.response)
+    print()
+    print('Who send the server?',q.nameserver)
+    print()
+    print('Port Number?', q.port)
+    print()
+    print('Is from authority name server?','AUTHORITY' in str(q.response))
+    #print(q.port)
+    #print(q.canonical_name)
+except dns.resolver.NoAnswer as na:
+    print('This request contains no content')
+```
+
+And the following screenshots shows the running results with different parameters:
+
+- www.sina.com.cn A
+
+![image](https://user-images.githubusercontent.com/64548919/159286644-9d90fe89-6657-4dfb-afb1-211f41072825.png)
+
+- www.sina.com.cn AAAA
+
+![image](https://user-images.githubusercontent.com/64548919/159287008-deddf12a-689f-42d1-bb13-944bc02e821f.png)
+
+- www.sina.com.cn CNAME
+
+![image](https://user-images.githubusercontent.com/64548919/159287130-2fa10cb2-9bb4-4567-a5ed-c9ed2bdcd632.png)
+
+- www.sina.com.cn NS
+
+![image](https://user-images.githubusercontent.com/64548919/159287255-2f125a32-018b-4850-b869-2db7fbd0e8dc.png)
 
 
+- www.sina.com.cn MX
 
+![image](https://user-images.githubusercontent.com/64548919/159287308-48e14155-7558-46bd-8cab-007d4d0edb5e.png)
