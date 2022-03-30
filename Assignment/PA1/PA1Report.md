@@ -100,8 +100,8 @@ Continue using the terminal in the previous section and type:
 dig @127.0.0.1 www.baidu114514.com a -p 5533
 ```
 
-![image](https://user-images.githubusercontent.com/64548919/160837399-4e5e62f1-ca10-4db4-a9ff-c58aceb9526d.png)
+![image](https://user-images.githubusercontent.com/64548919/160837903-e3b698a1-e791-47a8-9e57-f571696516c5.png)
 
-![image](https://user-images.githubusercontent.com/64548919/160837472-017f8967-2090-439d-a4bc-996021701b3e.png)
+![image](https://user-images.githubusercontent.com/64548919/160837939-89cd47de-ad5d-43e0-b0f7-71d5cddf30be.png)
 
 
