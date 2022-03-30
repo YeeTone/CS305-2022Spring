@@ -68,7 +68,13 @@ class CacheManager:
 
     def writeCache(self, domain_name: str, response) -> None:
         # TODO
-        self.domainName_RNameMapping[domain_name] = response.rr[0].rname
+
+        if response.rr is not None and len(response.rr) > 0:
+            self.domainName_RNameMapping[domain_name] = response.rr[0].rname
+        else:
+            print('this server cannot be accessed.')
+            return
+
         self.domainName_canonicalMapping[domain_name] = ReplyGenerator.canonical_hostname[:]
         self.domainName_responseMapping[domain_name] = response
         self.domainName_expirationMapping[domain_name] = float(response.a.ttl) + time.time()
@@ -230,12 +236,13 @@ class DNSHandler(threading.Thread):
 
         # 如果没查到，那么就走replyForNotFound，这个一方面是实际功能如此，另一方面出于对空指针的考虑
         if dstIP is None:
+            print('this server cannot be accessed.')
             re = ReplyGenerator.replyForNotFound(income_record)
             ReplyGenerator.allInitiate()  # 重置域名和TTL信息
             return re
         else:  # 查到了就保存对应的缓存
             re = ReplyGenerator.generalReply(income_record, dstIP, 0)
-            cacheManager.writeCache(domain_name, re)  # 写缓存
+            cacheManager.writeCache(domain_name, re) # 写缓存
             ReplyGenerator.allInitiate()  # 重置域名和TTL信息
             return re
 
