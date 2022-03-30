@@ -83,3 +83,12 @@ Continue using the terminal in the previous section and type:
 ```
 dig @127.0.0.1 www.baidu.com a -p 5533
 ```
+
+![image](https://user-images.githubusercontent.com/64548919/160834609-8a89e632-771f-4535-9193-a1b5dca03cfc.png)
+
+Please notice that when reading cacahe, the CNAME type can be displayed correctly.
+
+And here is the result in the terminal of `LocalDNSServer.py`:
+
+![image](https://user-images.githubusercontent.com/64548919/160834811-030903e6-3e9a-4de3-8560-ea4617ddad71.png)
+
