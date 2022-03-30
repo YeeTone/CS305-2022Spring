@@ -92,3 +92,16 @@ And here is the result in the terminal of `LocalDNSServer.py`:
 
 ![image](https://user-images.githubusercontent.com/64548919/160834811-030903e6-3e9a-4de3-8560-ea4617ddad71.png)
 
+### www.baidu114514.com (a domain name cannot be queried)
+
+Continue using the terminal in the previous section and type:
+
+```
+dig @127.0.0.1 www.baidu114514.com a -p 5533
+```
+
+![image](https://user-images.githubusercontent.com/64548919/160837399-4e5e62f1-ca10-4db4-a9ff-c58aceb9526d.png)
+
+![image](https://user-images.githubusercontent.com/64548919/160837472-017f8967-2090-439d-a4bc-996021701b3e.png)
+
+
