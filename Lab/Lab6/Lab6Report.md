@@ -34,13 +34,11 @@ Their name is `bbb_30fps.mpd`. Their mime type information is `audio/mp4`.
 ![image](https://user-images.githubusercontent.com/64548919/160973035-2e1c8cb7-9006-44f6-945a-85387e8afcfa.png)
 
 #### `m4s`, `m4v`, `mp4` files
-We can see that there are some `m4a` files, and some `m4v` files.
-We did not find the `mp4` or `m4s` files.
+We can see that there are some `m4a` files, and some `m4v` files, but we did not find the `mp4` or `m4s` files.
 
-![image](https://user-images.githubusercontent.com/64548919/160973374-c97c0abc-52b1-4177-89d7-e5357f651461.png)
+![image](https://user-images.githubusercontent.com/64548919/160988356-0cd799a7-0171-4d90-89b6-f5d85adc7190.png)
 
-And the rate is constant 30fps.
-I did not get the rate changing because the network is stable.
+And the rate is changing from 600k to 12000k.
 
 ## Practice6-2: CDN
 ### Step 1: Access a website using CDN
