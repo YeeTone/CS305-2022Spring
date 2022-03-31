@@ -50,3 +50,12 @@ We can see this is using CDN:
 
 ![image](https://user-images.githubusercontent.com/64548919/160978075-f2292713-26cd-4fa6-a7ea-2671546bda13.png)
 
+### Step 2: Find IP address
+Command:
+
+```
+dig d4.sina.com.cn
+```
+
+![image](https://user-images.githubusercontent.com/64548919/160992741-ce596121-3c2f-4f24-a814-b4cf2e506a45.png)
+
