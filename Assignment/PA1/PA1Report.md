@@ -1,5 +1,17 @@
 # PA1: DNS Server Implementation
 
+Name：Yitong WANG 11910104@mail.sustech.edu.cn
+
+Student ID：11910104
+
+Lab Time：Thursday 10:20 a.m. to 12:10 p.m.
+
+Lab Teacher：Qing WANG wangq9@mail.sustech.edu.cn
+
+Lab SA:
+- Siyu LIU 11912935@mail.sustech.edu.cn
+- Xingying ZHENG 11912039@mail.sustech.edu.cn
+
 You can follow these steps to test the function of LocalDNSServer.
 
 ## Network Information
@@ -39,7 +51,7 @@ And here is the result.
 
 ![image](https://user-images.githubusercontent.com/64548919/160832810-366460ac-f93d-46a1-a778-f48b1952d4ce.png)
 
-Notice that there may be a bug that in the answer section, the CNAME field is not added into the result. (I tried my best to fix it, but did not succeed)
+**Notice that there may be a bug that in the answer section, the CNAME field is not added into the result. (I tried my best to fix it, but did not succeed)**
 
 ### www.sina.com
 Continue using the terminal in the previous section and type:
