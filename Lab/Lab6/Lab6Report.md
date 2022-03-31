@@ -59,3 +59,6 @@ dig d4.sina.com.cn
 
 ![image](https://user-images.githubusercontent.com/64548919/160992741-ce596121-3c2f-4f24-a814-b4cf2e506a45.png)
 
+We can see the ip is `183.60.138.230`
+
+### Step 3: Find again in another province
