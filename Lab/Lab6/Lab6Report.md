@@ -41,3 +41,14 @@ We did not find the `mp4` or `m4s` files.
 
 And the rate is constant 30fps.
 I did not get the rate changing because the network is stable.
+
+## Practice6-2: CDN
+### Step 1: Access a website using CDN
+```
+curl https://d4.sina.com.cn/202110/15/1581703.jpg --head
+```
+
+We can see this is using CDN:
+
+![image](https://user-images.githubusercontent.com/64548919/160978075-f2292713-26cd-4fa6-a7ea-2671546bda13.png)
+
