@@ -62,3 +62,8 @@ dig d4.sina.com.cn
 We can see the ip is `183.60.138.230`
 
 ### Step 3: Find again in another province
+Thanks to Haobo LI, who is in Hubei Province to give a hand to the experiment.
+
+![image](https://user-images.githubusercontent.com/64548919/160995384-49406285-2e78-499f-a7cc-9a8fb927de67.png)
+
+And his IP address found is ```111.48.132.35```, which is different from the one found in my computer.
