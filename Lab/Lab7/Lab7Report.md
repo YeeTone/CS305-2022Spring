@@ -80,7 +80,7 @@ Here is the sequence number, it is 1:
 ![image](https://user-images.githubusercontent.com/64548919/161713386-69f1bfc9-3d0a-4698-8066-e3147c7eed3e.png)
 
 ### Q7. POST, TCP, RTT
-The first six sequence numbers:
+
 
 ### Q9. Buffer space
 The minimum buffer space is 29200, and maximum is 131328.
