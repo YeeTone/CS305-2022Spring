@@ -34,3 +34,5 @@ Then open the header:
 - (4)MaxLength: 8 bytes since 4 * 2 = 8 bytes.
 - (5)Max Destination Port: Consider there are 16 bits in the destination field, the maximum port is 2^16 - 1 = 65535.
 - (6)Protocol ID: 17 in decimal, 0x11 in hexadecimal
+
+## Practice7-2: Questions in `Wireshark_TCP_v7.0.pdf`
