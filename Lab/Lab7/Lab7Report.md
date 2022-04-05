@@ -78,3 +78,27 @@ Select one PST packet:
 Here is the sequence number, it is 1:
 
 ![image](https://user-images.githubusercontent.com/64548919/161713386-69f1bfc9-3d0a-4698-8066-e3147c7eed3e.png)
+
+### Q7. POST, TCP, RTT
+The first six sequence numbers:
+
+### Q9. Buffer space
+The minimum buffer space is 29200, and maximum is 131328.
+
+![image](https://user-images.githubusercontent.com/64548919/161721309-08dc0708-114c-41aa-aabb-f7593f116703.png)
+
+The lack of receiver buffer space does not throttle the sender.
+
+### Q10 Retransmission
+
+
+### Q12 Throughput
+First and last TCP packet:
+
+![image](https://user-images.githubusercontent.com/64548919/161724911-af788ee5-0bfb-49ff-8a71-6eec81645f66.png)
+
+Time = 9.455048 - 3.623846 = 5.831202 s
+
+Amount of data transferred: 1144 - 0 = 1144 bytes
+
+Throughput = 1144 / 5.831202 = 196 bytes/sec
