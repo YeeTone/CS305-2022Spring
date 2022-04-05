@@ -69,3 +69,12 @@ Select one SYNACK packet:
 - The flag is set as (SYN, ACK), to identify the SYNACK segment.
 
 ![image](https://user-images.githubusercontent.com/64548919/161710593-b600fbdc-4782-480a-9f75-9cd698e6e813.png)
+
+### Q6. POST
+Select one PST packet:
+
+![image](https://user-images.githubusercontent.com/64548919/161713424-d594f154-6d21-4808-af7a-5544c02572a6.png)
+
+Here is the sequence number, it is 1:
+
+![image](https://user-images.githubusercontent.com/64548919/161713386-69f1bfc9-3d0a-4698-8066-e3147c7eed3e.png)
