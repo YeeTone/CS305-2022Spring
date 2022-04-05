@@ -36,3 +36,36 @@ Then open the header:
 - (6)Protocol ID: 17 in decimal, 0x11 in hexadecimal
 
 ## Practice7-2: Questions in `Wireshark_TCP_v7.0.pdf`
+### Q4. Sequence number
+First use display filter to get the ip address of `gaia.cs.umass.edu`:
+
+```
+http.host == "gaia.cs.umass.edu"
+```
+
+We get the ip address is `128.119.245.12`.
+
+Then use this in the display filter:
+
+```
+ip.addr == 128.119.245.12
+```
+
+We can get the initial sequence number is 0.
+
+![image](https://user-images.githubusercontent.com/64548919/161708749-7f35c67f-e0b7-495d-a42c-c4a7a26fc84f.png)
+
+### Q5. SYNACK fields
+Select one SYNACK packet: 
+
+![image](https://user-images.githubusercontent.com/64548919/161709403-0cbfbf25-539f-4da9-88ce-2770303d56f0.png)
+
+- Sequence number: 0
+- Acknowledgement value: 1
+
+![image](https://user-images.githubusercontent.com/64548919/161709851-47a66dd4-3968-4d17-951b-bfe492edad90.png)
+
+- The value is determined by increasing 1 to the initial sequence number.
+- The flag is set as (SYN, ACK), to identify the SYNACK segment.
+
+![image](https://user-images.githubusercontent.com/64548919/161710593-b600fbdc-4782-480a-9f75-9cd698e6e813.png)
