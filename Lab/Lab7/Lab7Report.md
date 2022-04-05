@@ -80,7 +80,15 @@ Here is the sequence number, it is 1:
 ![image](https://user-images.githubusercontent.com/64548919/161713386-69f1bfc9-3d0a-4698-8066-e3147c7eed3e.png)
 
 ### Q7. POST, TCP, RTT
+Consider the first six segments:
 
+![image](https://user-images.githubusercontent.com/64548919/161749366-eef70915-e4ec-4247-ae60-31e7a657b54c.png)
+
+Their sequence numbers are: 1, 982, 2442, 3902, 5362, 6822
+
+Their sent time are: 50.792192s, 52.025106s, 52.296217s, 52.301677s, 52.302.708s, 52.304825s
+
+Their ACK received time are: 50.796298s, 52.296150s, 52.301602s, 52.302651s, 52.304747s, 52.308065s
 
 ### Q9. Buffer space
 The minimum buffer space is 29200, and maximum is 131328.
