@@ -86,9 +86,11 @@ Consider the first six segments:
 
 Their sequence numbers are: 1, 982, 2442, 3902, 5362, 6822
 
-Their sent time are: 50.792192s, 52.025106s, 52.296217s, 52.301677s, 52.302.708s, 52.304825s
+Their sent time are: 50.792192s, 52.025106s, 52.296217s, 52.301677s, 52.302708s, 52.304825s
 
 Their ACK received time are: 50.796298s, 52.296150s, 52.301602s, 52.302651s, 52.304747s, 52.308065s
+
+Thus RTT are: 0.004106s, 0.003044s, 0.005385s, 0.000974s, 0.002039s, 0.003240s
 
 ### Q9. Buffer space
 The minimum buffer space is 29200, and maximum is 131328.
