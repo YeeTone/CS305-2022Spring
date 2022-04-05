@@ -90,7 +90,15 @@ The minimum buffer space is 29200, and maximum is 131328.
 The lack of receiver buffer space does not throttle the sender.
 
 ### Q10 Retransmission
+Select one TCP packet with PSH and ACK:
 
+![image](https://user-images.githubusercontent.com/64548919/161745983-e56fdba6-39ec-458f-bb25-34274350fb11.png)
+
+Then consider the Time/Sequence Graph.
+
+![image](https://user-images.githubusercontent.com/64548919/161746036-74ef81a7-fa63-41b1-be5f-0defb2227910.png)
+
+We can see that the sequence number is increased with time. Thus there is no data retransmission. If there is retransmission, the sequence number will have a "local minimum".
 
 ### Q12 Throughput
 First and last TCP packet:
