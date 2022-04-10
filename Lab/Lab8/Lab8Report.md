@@ -45,3 +45,19 @@ Select one TCP packets
 
 ![image](https://user-images.githubusercontent.com/64548919/162619466-47344a3d-5775-4c97-8029-22823f4ada88.png)
 
+### Retransmission
+
+Consider the sequence number-time graph:
+
+![image](https://user-images.githubusercontent.com/64548919/162619678-9b575182-8f05-42cc-b537-ef809b37176e.png)
+
+We can see that the sequence number is non-decreasing, thus there is no retransmission.
+
+### Windows size
+From all these packets, there is no one whose windows size is 0.
+
+![image](https://user-images.githubusercontent.com/64548919/162619904-8b5a98cc-e64f-49ae-927f-9421ff0c5154.png)
+
+### Full Windows
+
+From the screenshots in windows size, we can see that there is no full windows.
