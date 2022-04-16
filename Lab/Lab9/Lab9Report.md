@@ -34,17 +34,19 @@ We can see there are some DHCP packets:
 
 ![image](https://user-images.githubusercontent.com/64548919/163659252-ebce8899-aa06-4546-90ca-42f42d5b1c47.png)
 
-## Q1
+### Q1
 For the DHCP request:
 - src IP: 0.0.0.0
 - dst IP: 255.255.255.255
 
 
-## Q2
+### Q2
 
-## Q3
+### Q3
 Least Time:
 
 ![image](https://user-images.githubusercontent.com/64548919/163659985-6450c9b6-7a92-4a82-96c6-4cdc98da469c.png)
 
 Its value is 259200s. The DHCP packet type is Offer.
+
+## Practice9-2: Packet Tracer
