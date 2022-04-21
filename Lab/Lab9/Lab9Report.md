@@ -44,7 +44,7 @@ For the DHCP request:
 It needs DNS to get the translated IP address so that it can contact with others on the Internet.
 
 ### Q3
-Least Time:
+Lease Time:
 
 ![image](https://user-images.githubusercontent.com/64548919/163659985-6450c9b6-7a92-4a82-96c6-4cdc98da469c.png)
 
