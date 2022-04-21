@@ -66,3 +66,29 @@ Connection test:
 ![image](https://user-images.githubusercontent.com/64548919/164364200-514077cf-8d71-4bf6-8a83-97ed0b8e22c3.png)
 
 We can see that they could reach each other.
+
+### Two PC & One Route
+
+![image](https://user-images.githubusercontent.com/64548919/164367529-23bd239b-6cc7-4e0f-b937-f62a6dc49106.png)
+
+Their ip configuration:
+
+![image](https://user-images.githubusercontent.com/64548919/164367579-ef2e49f2-54b8-4b67-afbe-6c80fb88f5c9.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164367597-ddac6137-b58c-4fb4-83f7-faacdfb76cff.png)
+
+Router configuration:
+
+![image](https://user-images.githubusercontent.com/64548919/164367637-8b0fce65-8935-4a98-bd75-0cc0b469b7f5.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164367652-86ea7408-1f05-40e8-befe-94a4884aa7c0.png)
+
+Two PC connection test:
+
+![image](https://user-images.githubusercontent.com/64548919/164367726-1c17d8ee-1c5d-45d8-a08e-189277df30bc.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164367781-6cb2c5e2-986e-473c-9654-90098f7c3e71.png)
+
+We can see that they could communicate with each other.
+
+
