@@ -41,6 +41,7 @@ For the DHCP request:
 
 
 ### Q2
+It needs DNS to get the translated IP address so that it can contact with others on the Internet.
 
 ### Q3
 Least Time:
@@ -88,6 +89,8 @@ Router configuration:
 ![image](https://user-images.githubusercontent.com/64548919/164368229-57e1c159-8165-4973-a227-42c3a546c55b.png)
 
 ![image](https://user-images.githubusercontent.com/64548919/164368256-4d594da7-8322-46ea-811f-ff5b2530af60.png)
+
+The PC cand contact with the routers correctly.
 
 
 - Two PC connection test
