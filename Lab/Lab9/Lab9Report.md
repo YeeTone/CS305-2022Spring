@@ -50,3 +50,19 @@ Least Time:
 Its value is 259200s. The DHCP packet type is Offer.
 
 ## Practice9-2: Packet Tracer
+### Two PC connection
+![image](https://user-images.githubusercontent.com/64548919/164364029-5b54043c-6c8e-411f-a7c7-0925a51d1a20.png)
+
+Their ip configuration:
+
+![image](https://user-images.githubusercontent.com/64548919/164364078-d825504c-e0d3-4d4a-9603-1feef7c700a5.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164364111-13b01169-1dfe-4921-9b97-4ccc3d395fd2.png)
+
+Connection test:
+
+![image](https://user-images.githubusercontent.com/64548919/164364166-9a04db89-8e13-4197-8d9b-c58a4f85bafd.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164364200-514077cf-8d71-4bf6-8a83-97ed0b8e22c3.png)
+
+We can see that they could reach each other.
