@@ -36,8 +36,8 @@ We can see there are some DHCP packets:
 
 ### Q1
 For the DHCP request:
-- src IP: 0.0.0.0
-- dst IP: 255.255.255.255
+- src IP: 0.0.0.0, type: non routerable(未分配地址)
+- dst IP: 255.255.255.255, type: Broadcast Address(广播地址)
 
 
 ### Q2
