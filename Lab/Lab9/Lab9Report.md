@@ -83,7 +83,14 @@ Router configuration:
 
 ![image](https://user-images.githubusercontent.com/64548919/164367652-86ea7408-1f05-40e8-befe-94a4884aa7c0.png)
 
-Two PC connection test:
+- PCs & Router connection test
+
+![image](https://user-images.githubusercontent.com/64548919/164368229-57e1c159-8165-4973-a227-42c3a546c55b.png)
+
+![image](https://user-images.githubusercontent.com/64548919/164368256-4d594da7-8322-46ea-811f-ff5b2530af60.png)
+
+
+- Two PC connection test
 
 ![image](https://user-images.githubusercontent.com/64548919/164367726-1c17d8ee-1c5d-45d8-a08e-189277df30bc.png)
 
