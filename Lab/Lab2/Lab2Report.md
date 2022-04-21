@@ -156,6 +156,7 @@ And we can find that the source port and destination address are identical in th
 ## Practice 3: Wireshark & tracert
 ### Q1
 - Step 1: Add capture filter to select those packets whose destination address is www.163.com.
+<<<<<<< Updated upstream
 
 ```
 ip host www.163.com
@@ -228,11 +229,19 @@ We find that this result is almost the same as the command line result.
 ### Q3
 
 - Step 1: Type the following command in the command line.
+=======
+```
+ip host www.163.com
+```
+
+Then type the following commands to trace the route:
+>>>>>>> Stashed changes
 
 ```
 tracert -4 www.163.com
 ```
 
+<<<<<<< Updated upstream
 Then we can find the route of accessing www.163.com.
 ![image](https://user-images.githubusercontent.com/64548919/155979879-0af26de0-bd45-4524-babf-1b379791550e.png)
 
@@ -256,3 +265,5 @@ We can see the TTL + hop = 254 + 2 = 256, is the constant.
 This sum value is constant, because when the ip hops from one address to another, the TTL value will decrease 1 and hop will increase 1.
 If the TTL is 0 after decreasing, then the packet will be processed, or loss.
 Therefore, the sum will be an constant value.
+=======
+>>>>>>> Stashed changes
