@@ -23,6 +23,11 @@ Overall Effect:
 
 ![image](https://user-images.githubusercontent.com/64548919/164993252-0bab9944-73b2-41a7-b77a-7b791e6d48f6.png)
 
+Supporting Functions:
+1. Share Danmaku between two clients
+2. Support selecting colors, font size of Danmaku
+3. Support loading history Danmaku(HTTP version only)
+
 
 ## Running Result
 
@@ -52,3 +57,7 @@ We can see that in the second client, the danmaku can be viewed as well:
 
 ![image](https://user-images.githubusercontent.com/64548919/164993684-f60e5eed-1609-4c54-8e0c-fa36729ab654.png)
 
+## Analytical Conclusions
+1. WebSocket is bidirectional, while HTTP is single-directional. After the data has been sent, the connection of HTTP will be closed while Websocket won't.
+2. WebSocket is less easier to cause network traffic in this design. In the implementation, the client will load all the danmaku from the server thus decreases the efficiency of data transmission.
+3. Both of them support polling rules so that they could get the new data from the server.
