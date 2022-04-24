@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danmaku</title>
+</head>
+<body>
+
+<div class="screen_container" id="contents">
+</div>
+
+<div class="main">
+    <label for="danmakutext"></label><textarea id="danmakutext" type="text" placeholder="Danmaku~"></textarea>
+    <input type="color" id="colorSelection" name="color"
+           value="#ffffff">
+    <label for="colorSelection">Head</label>
+    <label>
+        <select id="fontSizeSelection">
+            <option value="Large" selected>大</option>
+            <option value="Small">小</option>
+        </select>
+    </label>
+    <button class="send">Send</button>
+</div>
+<style>
+    .screen_container {
+        position: relative;
+        width: 800px;
+        height: 400px;
+        margin: 30px auto;
+        background: #000;
+        overflow: hidden;
+        border-style: solid;
+        border-radius: 25px;
+        border-color: deeppink;
+    }
+
+    .main {
+        width: 600px;
+        margin: 20px auto;
+        text-align: center;
+    }
+</style>
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    const localhostURL = 'http://127.0.0.1:8765';
+    const timers = [];
+    let latestTime = 0;
+    let displayedTimes = new Set()
+    //const jqueryDom = createDanmaku('hihihi'); // test danmaku, delete it as you like
+    //addInterval(jqueryDom);// test danmaku, delete it as you like
+
+    // TODO: construct http request for communication
+    // TODO: add polling rules for new danmakus
+
+    /**
+     * 此处是做一个轮询操作，每隔1秒就从服务器端读取所有弹幕并做筛选。
+     * 使用集合进行去重操作，以避免重复显示弹幕。
+     */
+    setInterval(function () {
+        $.get(localhostURL + '/getDanmaku?latestTime='+latestTime, function (re) {
+            let all = re.split('\n');
+            //console.log(re.split('\n'))
+            for(const a in all){
+                const sp = all[a].split('|||')[3]
+                if(sp === undefined){
+                    continue
+                }
+                console.log(sp)
+                //console.log(displayedTimes.keys())
+                if(displayedTimes.has(sp) || all[a].length === 0){
+                    continue
+                }
+
+                //console.log(all[a])
+
+                let dm = createDanmaku(all[a]);
+                addInterval(dm);
+                displayedTimes.add(sp)
+            }
+        })
+    }, 1000);
+
+
+    /**
+     * 此处是向服务器发送弹幕
+     * 格式为Color|||Size|||Content|||TimeStamp
+     */
+    $(".send").on("click", function () {
+        let data = document.getElementById("danmakutext").value;
+        if (data.length === 0) {
+            data = 'Danmaku~'
+        }
+        let color = document.getElementById('colorSelection').value;
+
+        let fontSize = document.getElementById("fontSizeSelection")
+        let index = fontSize.selectedIndex
+        if (index === undefined) {
+            index = 0;
+        }
+
+        fontSize = fontSize.options[index].value;
+
+        let time = (new Date().valueOf())
+
+        $.post(localhostURL, {
+            value: color + '|||' + fontSize + '|||' + data + '|||' + time
+        })
+        latestTime = time
+    });
+
+
+    // create a Dom object corresponding to a danmaku
+
+    /**
+     *
+     * @param text 传入的文本内容，结构为Color|||Size|||Content|||TimeStamp
+     * @returns {*|jQuery|HTMLElement} 构造好的弹幕体
+     */
+    function createDanmaku(text) {
+        const splited = text.split('|||')
+        const font = splited[1]
+        const jqueryDom = $("<div class='bullet'>" + splited[2] + "</div>");
+        const fontColor = splited[0];
+        const fontSize = font === 'Large' ? "20px" : "15px";
+        let top = Math.floor(Math.random() * 400) + "px";
+        const left = $(".screen_container").width() + "px";
+        jqueryDom.css({
+            "position": 'absolute',
+            "color": fontColor,
+            "font-size": fontSize,
+            "left": left,
+            "top": top,
+        });
+        $(".screen_container").append(jqueryDom);
+        return jqueryDom;
+    }
+
+    /**
+     * 未作修改
+     * @param jqueryDom
+     */
+    // add timer task to let the danmaku fly from right to left
+    function addInterval(jqueryDom) {
+        let left = jqueryDom.offset().left - $(".screen_container").offset().left;
+        const timer = setInterval(function () {
+            left--;
+            jqueryDom.css("left", left + "px");
+            if (jqueryDom.offset().left + jqueryDom.width() < $(".screen_container").offset().left) {
+                jqueryDom.remove();
+                clearInterval(timer);
+            }
+        }, 5); // set delay as 5ms,which means the danmaku changes its position every 5ms
+        timers.push(timer);
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danmaku</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div class="screen_container" id="contents">
+</div>
+
+<div class="main">
+
+    <label for="danmakutext"></label><textarea id="danmakutext" type="text" placeholder="Danmaku~"></textarea>
+    <input type="color" id="colorSelection" name="color"
+           value="#ffffff">
+    <label for="colorSelection">Head</label>
+    <label>
+        <select id="fontSizeSelection">
+            <option value="Large" selected>大</option>
+            <option value="Small">小</option>
+        </select>
+    </label>
+    <button class="send">Send</button>
+</div>
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
