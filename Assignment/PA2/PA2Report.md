@@ -1,4 +1,4 @@
-# PA2: Danmaku System Implementation
+# PA2: Danmaku System
 
 Name：Yitong WANG 11910104@mail.sustech.edu.cn
 
