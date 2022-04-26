@@ -58,6 +58,6 @@ We can see that in the second client, the danmaku can be viewed as well:
 ![image](https://user-images.githubusercontent.com/64548919/164993684-f60e5eed-1609-4c54-8e0c-fa36729ab654.png)
 
 ## Analytical Conclusions
-1. WebSocket is bidirectional, while HTTP is single-directional. After the data has been sent, the connection of HTTP will be closed while Websocket won't.
+1. WebSocket is bidirectional, while HTTP is single-directional. After the data has been sent, the connection of HTTP will be closed while Websocket won't. In one connection, the client and the server can communicate with each other directly in WebSocket, but not in HTTP. HTTP connection only support the client to send data to the server.
 2. WebSocket is less easier to cause network traffic in this design. In the implementation, the client will load all the danmaku from the server thus decreases the efficiency of data transmission.
-3. Both of them support polling rules so that they could get the new data from the server.
+3. Both of them support polling rules so that they could get the new data from the server. But the http version needs to cost more time since in each poll the client needs to build connection with the server. HTTP connection is stateless.
