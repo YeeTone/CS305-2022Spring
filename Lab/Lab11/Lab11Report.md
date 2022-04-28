@@ -77,5 +77,21 @@ Commands:
 tracert -4 www.sustech.edu.cn
 ```
 
+- Q1: Is there any 'Time-to-live exceeded' ICMP packets? 
+
+A1: We can see that there are some 'TTL exceeded' ICMP packets.
+
+![image](https://user-images.githubusercontent.com/64548919/165673522-f3232c8b-de37-42ef-bab4-cc3dd7aedcbb.png)
+
+- Q2: What's the difference between these ICMP packets which are invoked by 'tracert' and ICMP echo request/replay packets which are invoked by 'ping'?
+
+A2: Differences:
+
+1.
+
+2.
+
+3.
 
 ## Practice11.3: Packet-tracer and ICMP
+
