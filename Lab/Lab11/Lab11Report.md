@@ -25,7 +25,13 @@ ping www.example.com -4 -l 2021
 
 - Q2: Is there any fragmentation on the IP packets, how to find them?
 
-A2: 
+A2: We can see that these packets do not have fragmentation.
+
+![image](https://user-images.githubusercontent.com/64548919/165670434-04c0057c-f963-4f98-af5b-6c17152da3f6.png)
+
+- Q3: How many fragments are the 2021-Byte-length IP packet divided into?
+
+A3: 
 
 
 ## Practice11.2: tracert and ICMP
