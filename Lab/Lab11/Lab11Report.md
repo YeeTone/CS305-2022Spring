@@ -87,7 +87,7 @@ A1: We can see that there are some 'TTL exceeded' ICMP packets.
 
 A2: Differences:
 
-1.
+1. The total length of packets caused by `tracert` is much smaller than those by `ping`. The total length is 56 in `tracert` while 1500 in `ping`.
 
 2.
 
