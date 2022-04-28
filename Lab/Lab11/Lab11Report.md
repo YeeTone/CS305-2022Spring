@@ -89,9 +89,9 @@ A2: Differences:
 
 1. The total length of packets caused by `tracert` is much smaller than those by `ping`. The total length is 56 in `tracert` while 1500 in `ping`.
 
-2.
+2. The packet by `ping` will contain a original packet(2021 bytes), while not by `tracert`
 
-3.
+3. The TTL is not the same.
 
 ## Practice11.3: Packet-tracer and ICMP
 
