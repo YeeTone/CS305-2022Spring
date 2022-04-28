@@ -71,4 +71,11 @@ The sum is not equal, 1500 + 569 = 2069 != 2021.
 
 ## Practice11.2: tracert and ICMP
 
+Commands: 
+
+```
+tracert -4 www.sustech.edu.cn
+```
+
+
 ## Practice11.3: Packet-tracer and ICMP
