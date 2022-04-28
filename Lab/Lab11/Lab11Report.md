@@ -25,14 +25,49 @@ ping www.example.com -4 -l 2021
 
 - Q2: Is there any fragmentation on the IP packets, how to find them?
 
-A2: We can see that these packets do not have fragmentation.
+A2: We can see that these packets have fragmentation.
 
-![image](https://user-images.githubusercontent.com/64548919/165670434-04c0057c-f963-4f98-af5b-6c17152da3f6.png)
+![image](https://user-images.githubusercontent.com/64548919/165670908-b4157c09-d85a-4473-8fb1-9fa1fd72f214.png)
+
 
 - Q3: How many fragments are the 2021-Byte-length IP packet divided into?
 
-A3: 
+A3: It is divided into two fragments, for each of 2021-Byte-length ip packet.
+This is because for two consecutive packets, one is IPv4 and one is ICMP.
 
+![image](https://user-images.githubusercontent.com/64548919/165671085-f1648caa-0700-4a4f-8d49-c793c827f5ae.png)
+
+This also supports the idea.
+
+![image](https://user-images.githubusercontent.com/64548919/165671262-836387f7-3daf-42dc-a78d-6bdadef0b1b7.png)
+
+- Q4: How to identify the ICMP Echo request and Echo reply?
+
+A4: It could be seen in the type information of the packet:
+
+![image](https://user-images.githubusercontent.com/64548919/165671417-23a49718-6aea-4910-ab0f-648879942e67.png)
+
+![image](https://user-images.githubusercontent.com/64548919/165671457-b151316b-9c54-4ab4-9f29-0ed5dfab3a91.png)
+
+- Q5: For the ICMP Echo request, which fragment is the first one, which is the last ? How to identify them?
+
+A5: In the captured packets, the #53 is the first one, and #177 is the last one. This can be identified by the epoch time.
+
+![image](https://user-images.githubusercontent.com/64548919/165671760-cee76672-8e7c-4f0f-b1cf-135a25abcd14.png)
+
+- Q6: What’s the length of each IP fragment? Is the sum of each fragment’s length equal to the original IP packet?
+
+A6: Take 1 IPv4 and 1 ICMP packet as an example.
+
+![image](https://user-images.githubusercontent.com/64548919/165672008-2a5d7dd3-b827-4961-ac6a-0c8411c85d98.png)
+
+The length of the IPv4 fragment is 1500, with 20 header length and 1480 data length.
+
+![image](https://user-images.githubusercontent.com/64548919/165672231-f4b3e28b-fb66-471b-a007-69efe94fb37d.png)
+
+The length of ICMP fragment is 569, with 20 header length and 2021 data length.
+
+The sum is not equal, 1500 + 569 = 2069 != 2021.
 
 ## Practice11.2: tracert and ICMP
 
