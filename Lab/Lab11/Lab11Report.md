@@ -121,3 +121,19 @@ ping FE80::2D0:97FF:FE23:5B1C
 ```
 
 ![image](https://user-images.githubusercontent.com/64548919/166176937-fa7626cd-47b4-44ad-87cd-09d21b7a3e03.png)
+
+- Q3: What’s the difference between IPv4 datagram and IPv6 datagram? List at least 3 aspects.
+
+A3: get the ipv6 packet under the simulation mode:
+
+![image](https://user-images.githubusercontent.com/64548919/166177811-5a93a246-2334-48e5-a3c6-57abceddaa95.png)
+
+get the ipv4 packet under the simulation mode:
+
+![image](https://user-images.githubusercontent.com/64548919/166178227-3e5bdd25-6d06-4e95-9230-e70f138389d0.png)
+
+We can see there are several differences:
+
+1.
+
+- Q4: Does these two IPv6 addresses belong to the same sub-net, what is the sub-net ID of these two IPv6 addresses?
