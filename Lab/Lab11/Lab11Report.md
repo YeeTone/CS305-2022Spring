@@ -152,5 +152,4 @@ A4: use ipconfig to get the subnet mask.
 
 We do the AND operation between subnet mask and IP address. The result is same: 192.168.0.0
 
-Thus they belong to the same sub-net.
-
+Thus they belong to the same sub-net, and their sub-net ID is 192.168.0.0.
