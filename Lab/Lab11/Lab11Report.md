@@ -94,4 +94,30 @@ A2: Differences:
 3. The TTL is not the same.
 
 ## Practice11.3: Packet-tracer and ICMP
+Build connection first:
 
+![image](https://user-images.githubusercontent.com/64548919/166176693-11ca628e-99b4-4436-9319-c0e8e7d00810.png)
+
+- Q1: What's link-local unicast IPv6 address of these 2 PCs?
+
+A1: Check the ip configuration of these two PCs.
+
+![image](https://user-images.githubusercontent.com/64548919/166176763-476752ad-9291-432e-8708-63c4c42603f3.png)
+
+![image](https://user-images.githubusercontent.com/64548919/166176779-64be33f9-36b8-47c5-b2f5-c61476f2d20f.png)
+
+We can get the IPv6 address:
+
+PC0: FE80::230:F2FF:FEBA:D0EC
+
+PC1: FE80::2D0:97FF:FE23:5B1C
+
+- Q2: Initiates an ICMPv6 session on PC0 to PC1, capture the packets
+
+A2: Open a command prompt and type the following commands:
+
+```
+ping FE80::2D0:97FF:FE23:5B1C
+```
+
+![image](https://user-images.githubusercontent.com/64548919/166176937-fa7626cd-47b4-44ad-87cd-09d21b7a3e03.png)
