@@ -12,6 +12,9 @@ Lab SA:
 - Siyu LIU 11912935@mail.sustech.edu.cn
 - Xingying ZHENG 11912039@mail.sustech.edu.cn
 
+## Additional Libraries
+> from urllib.parse import unquote
+
 ## System Design
 This system implements a simple version of Danmaku, which supports users to send Danmaku of different font size and color.
 

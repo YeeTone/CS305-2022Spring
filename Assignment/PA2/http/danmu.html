@@ -11,9 +11,11 @@
 
 <div class="main">
     <label for="danmakutext"></label><textarea id="danmakutext" type="text" placeholder="Danmaku~"></textarea>
+    <!-- 增加字体颜色的调色盘          -->
     <input type="color" id="colorSelection" name="color"
            value="#ffffff">
     <label for="colorSelection">Head</label>
+    <!-- 增加字体大小的选择框           -->
     <label>
         <select id="fontSizeSelection">
             <option value="Large" selected>大</option>
@@ -67,9 +69,9 @@
                 if(sp === undefined){
                     continue
                 }
-                console.log(sp)
+                //console.log(sp)
                 //console.log(displayedTimes.keys())
-                if(displayedTimes.has(sp) || all[a].length === 0){
+                if(displayedTimes.has(sp) || all[a].length === 0){ // 如果显示过了，或者是空的，就无需再次展示。
                     continue
                 }
 
@@ -94,19 +96,21 @@
         }
         let color = document.getElementById('colorSelection').value;
 
-        let fontSize = document.getElementById("fontSizeSelection")
+        let fontSize = document.getElementById("fontSizeSelection") //获取字体大小的内容。
         let index = fontSize.selectedIndex
-        if (index === undefined) {
+        if (index === undefined) { //如果一开始是未选中，则设置为Large。
             index = 0;
         }
 
         fontSize = fontSize.options[index].value;
 
-        let time = (new Date().valueOf())
+        let time = (new Date().valueOf()) // 获取当前时间戳
 
         $.post(localhostURL, {
             value: color + '|||' + fontSize + '|||' + data + '|||' + time
         })
+
+        // 发送post请求， 格式为Color|||Size|||Content|||TimeStamp
         latestTime = time
     });
 

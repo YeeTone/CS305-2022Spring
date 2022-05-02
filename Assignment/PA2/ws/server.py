@@ -26,7 +26,10 @@ class DanmakuServer:
                     # print(message)
                 websockets.broadcast(DanmakuServer.Connecting, message)
         finally:
-            #DanmakuServer.Connecting.remove(websocket)
+            '''
+            处理完成后就关闭相应的连接
+            '''
+            DanmakuServer.Connecting.remove(websocket)
             websocket.close()
         # raise NotImplementedError
 

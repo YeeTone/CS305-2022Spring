@@ -43,7 +43,7 @@ class HTTPHeader:
         if fileds[0] == 'Range':
             start, end = (fileds[1].strip().strip('bytes=')).split('-')
             self.headers['Range'] = start, end
-        if fileds[0] == 'Content-Length':
+        if fileds[0] == 'Content-Length': #特别注意此处！需要加一个if分支以获取content length！这是后续读取弹幕内容的关键信息。
             self.headers['Content-Length'] = fileds[1].strip()
 
     def set_version(self, version):
@@ -116,16 +116,23 @@ async def dispatch(reader, writer):
             writer.write(httpHeader.message().encode(encoding='utf-8'))
 
             returnedDanmaku = ''
-            # 一次性获取所有的弹幕内容，格式为Color|||Size|||Content|||TimeStamp
+            # 一次性获取所有的弹幕内容，格式为Color|||Size|||Content|||TimeStamp，使用\n连接不同的弹幕
             for k in Time_DanmakuSize_Mapping.keys():
                 returnedDanmaku += Time_DanmakuColor_Mapping[k] + '|||' + Time_DanmakuSize_Mapping[k] + '|||' + \
                                    Time_DanmakuContent_Mapping[k] + '|||' + k
                 returnedDanmaku += '\n'
+            # 最后将弹幕内容encode返回给writer
             writer.write(returnedDanmaku.encode())
     elif httpHeader.get('method') == 'POST':
         # TODO: handle post request with given parameters
         httpHeader.set_state('200 OK')
         writer.write(httpHeader.message().encode(encoding='utf-8'))  # construct 200 OK HTTP header
+        '''
+        此处中，header中封装的contentlength起到了作用。直接读取n长度的bytes数做处理。
+        decode获取内容，但是对于一些特殊字符得到的是%20等等形式，不太方便阅读。
+        unquote可以将特殊字符转换回来。
+        这个思路来源于任艺伟同学，但并无读过他的任何代码。
+        '''
 
         body = await reader.read(int(httpHeader.headers['Content-Length']))
         body = body.decode()

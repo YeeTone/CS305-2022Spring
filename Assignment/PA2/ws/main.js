@@ -38,7 +38,6 @@ $(".send").on("click", function () {
         index = 0;
     }
     // console.log(index)
-    console.log(fontSize.options)
 
     fontSize = fontSize.options[index].value;
 
