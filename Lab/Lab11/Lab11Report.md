@@ -134,6 +134,23 @@ get the ipv4 packet under the simulation mode:
 
 We can see there are several differences:
 
-1.
+1. ipv6 contains hardware information, while ipv4 not
+2. ipv6 omites the protocol type information
+3. ipv6 omites opcde and adds hop limit in the datagram
 
 - Q4: Does these two IPv6 addresses belong to the same sub-net, what is the sub-net ID of these two IPv6 addresses?
+
+A4: use ipconfig to get the subnet mask.
+
+> Subnet mask
+> PC0: 255.255.255.0
+> PC1: 255.255.255.0
+
+> IP address
+> PC0: 192.168.0.2
+> PC1: 192.168.0.1
+
+We do the AND operation between subnet mask and IP address. The result is same: 192.168.0.0
+
+Thus they belong to the same sub-net.
+
