@@ -11,5 +11,7 @@ Lab SA:
 - Siyu LIU 11912935@mail.sustech.edu.cn
 - Xingying ZHENG 11912039@mail.sustech.edu.cn
 
-## Practice10.1：
-## Practice10.2:
+## Practice10.1：Build the network
+Successful Connection:
+
+![image](https://user-images.githubusercontent.com/64548919/167108405-ac6b3888-edc2-4795-a91f-ac3193d830e7.png)
