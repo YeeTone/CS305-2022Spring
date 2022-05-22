@@ -58,3 +58,13 @@ After shutdown the Fa0/3 of switch 3:
 The root is not changed.
 
 ![image](https://user-images.githubusercontent.com/64548919/169683577-141d1d54-8a0b-4745-a14c-e585cb48bff7.png)
+
+## Practice 13.3
+
+![image](https://user-images.githubusercontent.com/64548919/169684179-046aab2d-8f46-451d-9fd8-d92ecfd89f54.png)
+
+PCs in the same VLAN could communicate with each other.
+For instance, PC3 can ping PC1:
+
+![image](https://user-images.githubusercontent.com/64548919/169685025-37ccb4e8-5e10-4fdf-81da-90b2c63bdefb.png)
+
