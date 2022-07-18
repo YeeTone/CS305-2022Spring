@@ -7,4 +7,4 @@ Some studying content about CS305: Computer Network by Prof.Zhuozhao LI and Mrs.
 - PA1: 70/100
 - PA2: 102/100
 - PA3: 100/100
-- Project: 100+/100
+- Project: 110/100
